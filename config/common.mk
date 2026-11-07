@@ -243,7 +243,7 @@ ifneq ($(TARGET_DISABLE_FASTBOOTD),true)
 PRODUCT_PACKAGES += \
     fastbootd
 endif
-    
+
 # FaceUnlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
 TARGET_PROVIDES_FACE_UNLOCK_HAL ?= false
@@ -281,7 +281,7 @@ PRODUCT_COPY_FILES += \
 # Gamespace
  PRODUCT_PACKAGES += \
      GameSpace
- 
+
  PRODUCT_PRODUCT_PROPERTIES += \
      debug.graphics.game_default_frame_rate.disabled=true
 
@@ -290,11 +290,8 @@ ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/pixel/gms/products/gms.mk)
 $(call inherit-product, vendor/pixel/themepicker/products/themepicker.mk)
 $(call inherit-product, vendor/pixel/sounds/products/sounds.mk)
-
-ifeq ($(INFINITY_BUILD_TYPE),OFFICIAL)
 PRODUCT_PACKAGES += \
     UpdaterGMSOverlay
-endif
 endif
 
 # Openssh
